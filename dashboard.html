@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Emily Brown - Musculoskeletal Case</title>
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      font-family: 'Segoe UI', sans-serif;
+    }
+
+    body {
+      background-color: #f4f6f8;
+    }
+
+    .navbar {
+      display: flex;
+      flex-wrap: wrap;
+      background-color: #1e3a8a;
+      padding: 10px 20px;
+      justify-content: space-between;
+      align-items: center;
+      position: sticky;
+      top: 0;
+      z-index: 10;
+    }
+
+    .navbar h1 {
+      color: #fff;
+      font-size: 22px;
+    }
+
+    .navbar a {
+      color: #dbeafe;
+      text-decoration: none;
+      padding: 8px 15px;
+      margin: 5px;
+      border-radius: 6px;
+      transition: background 0.3s;
+    }
+
+    .navbar a:hover {
+      background-color: #2563eb;
+    }
+
+    .content {
+      padding: 30px;
+      max-width: 1000px;
+      margin: auto;
+    }
+
+    .section {
+      display: none;
+      background-color: white;
+      padding: 25px;
+      border-radius: 12px;
+      box-shadow: 0 0 12px rgba(0, 0, 0, 0.1);
+      margin-bottom: 30px;
+      animation: fadeIn 0.5s ease-in-out;
+    }
+
+    .section.active {
+      display: block;
+    }
+
+    @keyframes fadeIn {
+      from {opacity: 0; transform: translateY(10px);}
+      to {opacity: 1; transform: translateY(0);}
+    }
+
+    h2 {
+      color: #1e3a8a;
+      margin-bottom: 15px;
+    }
+
+    p, li {
+      margin-bottom: 8px;
+      font-size: 16px;
+      line-height: 1.5;
+      color: #333;
+    }
+
+    ul {
+      list-style: disc inside;
+    }
+
+    .visual {
+      margin: 20px 0;
+      text-align: center;
+    }
+
+    .visual img {
+      max-width: 90%;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.2);
+    }
+  </style>
+  <script>
+    function showSection(id) {
+      const sections = document.querySelectorAll('.section');
+      sections.forEach(section => section.classList.remove('active'));
+      document.getElementById(id).classList.add('active');
+    }
+  </script>
+</head>
+<body>
+  <div class="navbar">
+    <h1>Patient Dashboard</h1>
+    <div>
+      <a href="#" onclick="showSection('patient-info')">Patient Info</a>
+      <a href="#" onclick="showSection('chief-complaint')">Chief Complaint</a>
+      <a href="#" onclick="showSection('past-history')">Past History</a>
+      <a href="#" onclick="showSection('medications')">Medications</a>
+      <a href="#" onclick="showSection('social-history')">Social History</a>
+      <a href="#" onclick="showSection('vital-signs')">Vital Signs</a>
+      <a href="#" onclick="showSection('physical-exam')">Physical Exam</a>
+      <a href="#" onclick="showSection('assessment')">Assessment</a>
+      <a href="#" onclick="showSection('treatment-plan')">Treatment Plan</a>
+      <a href="#" onclick="showSection('diagnostics')">Diagnostics</a>
+      <a href="#" onclick="showSection('diet')">Diet</a>
+      <a href="#" onclick="showSection('doctors-orders')">Doctor's Orders</a>
+    </div>
+  </div>
+
+  <div class="content">
+    <div class="section active" id="patient-info">
+      <h2>Patient Information</h2>
+      <p><strong>Name:</strong> Emily Brown</p>
+      <p><strong>Age:</strong> 34</p>
+      <p><strong>Gender:</strong> Female</p>
+      <p><strong>Date of Admission:</strong> January 25, 2025 – 11:00 AM CST</p>
+      <p><strong>Medical Record No.:</strong> 234567</p>
+      <p><strong>Primary Language:</strong> English</p>
+      <p><strong>Allergies:</strong> None reported</p>
+    </div>
+
+    <div class="section" id="chief-complaint">
+      <h2>Chief Complaint</h2>
+      <p>Severe pain in the right knee following a fall while jogging two days ago.</p>
+    </div>
+
+    <div class="section" id="past-history">
+      <h2>Past History</h2>
+      <ul>
+        <li>No prior musculoskeletal injuries</li>
+        <li>No history of arthritis or chronic pain</li>
+      </ul>
+    </div>
+
+    <div class="section" id="medications">
+      <h2>Medications</h2>
+      <ul>
+        <li>Ibuprofen (Advil) – as needed for pain</li>
+        <li>Multivitamin – daily</li>
+      </ul>
+    </div>
+
+    <div class="section" id="social-history">
+      <h2>Social History</h2>
+      <ul>
+        <li>Active lifestyle – runs and practices yoga</li>
+        <li>Non-smoker</li>
+        <li>Occasional alcohol use</li>
+      </ul>
+    </div>
+
+    <div class="section" id="vital-signs">
+      <h2>Vital Signs</h2>
+      <ul>
+        <li>Temperature: 98.6°F</li>
+        <li>Pulse: 78 bpm</li>
+        <li>Respiratory Rate: 16 breaths/min</li>
+        <li>Blood Pressure: 120/75 mmHg</li>
+      </ul>
+    </div>
+
+    <div class="section" id="physical-exam">
+      <h2>Physical Exam</h2>
+      <ul>
+        <li>Alert, moderate distress due to knee pain</li>
+        <li>Right knee swollen, bruised, flexion &lt; 90°, medial joint line tender</li>
+        <li>Positive McMurray test (possible meniscal tear)</li>
+      </ul>
+      <div class="visual">
+        <img src="https://www.verywellhealth.com/thmb/m3nH2ADnb-jOucXcE6N3gc4Rdjg=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/anatomy-of-the-meniscus-5188036-FINAL-26ee7b42ac3d4ef3a846012bfe3dc0f1.png" alt="Knee Diagram">
+        <p style="font-size: 14px; color: gray;">Visual: Anatomy of the Knee and Meniscus</p>
+      </div>
+    </div>
+
+    <div class="section" id="assessment">
+      <h2>Assessment</h2>
+      <p><strong>Primary Diagnosis:</strong> Right knee sprain with possible meniscal tear</p>
+      <p><strong>Secondary Diagnosis:</strong> Soft tissue contusion</p>
+    </div>
+
+    <div class="section" id="treatment-plan">
+      <h2>Treatment Plan</h2>
+      <ul>
+        <li>Ibuprofen 400 mg every 6 hours PRN</li>
+        <li>Acetaminophen as alternative</li>
+        <li>Ice knee for 20 minutes every hour</li>
+        <li>Elevate leg above heart level</li>
+        <li>Possible orthopedic referral if pain persists</li>
+      </ul>
+    </div>
+
+    <div class="section" id="diagnostics">
+      <h2>Diagnostics</h2>
+      <ul>
+        <li>X-ray – Right knee (within 24 hours)</li>
+        <li>MRI – If symptoms continue</li>
+      </ul>
+    </div>
+
+    <div class="section" id="diet">
+      <h2>Diet Recommendations</h2>
+      <ul>
+        <li>Balanced diet rich in calcium and vitamin D</li>
+        <li>Stay hydrated; eat anti-inflammatory foods (fish, nuts)</li>
+      </ul>
+    </div>
+
+    <div class="section" id="doctors-orders">
+      <h2>Doctor's Orders</h2>
+      <ul>
+        <li>Continue medications as prescribed</li>
+        <li>Schedule right knee X-ray</li>
+        <li>Follow-up in 1 week</li>
+        <li>Educate on RICE: Rest, Ice, Compression, Elevation</li>
+      </ul>
+    </div>
+  </div>
+</body>
+</html>
